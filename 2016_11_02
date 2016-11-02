@@ -1,0 +1,72 @@
+02/nov
+
+********* Comandos no GIT ******************************************************
+Abrir o Git Bash	
+
+cd até o diretorio desejado
+mkdir XXX - criar novo diretorio
+git init no novo diretorio
+
+OBJETIVO - ESTE VIDEO DE NODE.JS
+https://www.youtube.com/watch?v=Orh3eiNcETs
+
+
+
+
+
+********* MONGO DB ******************************************************
+fiz os passos de
+  https://docs.mongodb.com/getting-started/shell/tutorial/install-mongodb-on-windows/#install-mongodb-community-edition
+  criar c:\data\db e c:\data\log
+  criar o config
+  startar o serviço (como admin)
+  
+  https://docs.mongodb.com/getting-started/shell/client/#start-mongo
+  startar o shell do mongo - passar o caminho todo do exe.
+  
+  
+  setar variavel de ambiente path para abrir mongod sem colocar todo o caminho
+  https://www.youtube.com/watch?v=1uFY60CESlM&list=PL6gx4Cwl9DGDQ5DrbIl20Zu9hx1IjeVhO
+  subir o mongod e deixar aguardando conexoes
+  como deixar os dois cmds prontos - o da database e o em que vou fazer os comandos
+  
+  
+******** MONGOSKIN
+  Mongoskin Tutorial Mongoskin is probably the most developer-friendly MongoDB driver for Node.js at the moment 
+  estou seguindo os
+  
+  
+  ***** VOLTANDO AO VIDEO DO NODE.JS
+  - criei o index.js
+  - executar via node no promtp
+  
+Paula@pc-paula MINGW64 ~/Documents/2016/GitHub/meunodejs (master)
+$ node index.js
+{ [Error: Cannot find module '../build/Release/bson'] code: 'MODULE_NOT_FOUND' }
+
+js-bson: Failed to load c++ bson extension, using pure JS version
+Servidor escuchando en el puerto 8080
+
+
+Tratei este erro conforme a orientação em: 
+  http://stackoverflow.com/questions/21656420/failed-to-load-c-bson-extension
+  https://www.npmjs.com/package/bson
+  
+Instalando bson novamente
+
+Paula@pc-paula MINGW64 ~/Documents/2016/GitHub/meunodejs (master)
+$ npm install bson
+npm WARN package.json example-restfulapi@ No description
+npm WARN package.json example-restfulapi@ No repository field.
+npm WARN package.json example-restfulapi@ No README data
+npm WARN package.json example-restfulapi@ No license field.
+bson@0.5.6 node_modules\bson
+
+Testando novamente:
+
+Paula@pc-paula MINGW64 ~/Documents/2016/GitHub/meunodejs (master)
+$ node index.js
+Servidor escuchando en el puerto 8080
+
+
+FUNCIONOU!!!\o/\o/\o/\o/
