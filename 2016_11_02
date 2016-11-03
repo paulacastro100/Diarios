@@ -70,3 +70,39 @@ Servidor escuchando en el puerto 8080
 
 
 FUNCIONOU!!!\o/\o/\o/\o/
+
+
+
+**** ADVANCED REST CLIENT FOR CHROME ********
+necessário para testar
+
+Vários testes com portas 8080 e 3000 e nao funcionavam
+Criei o arquivo teste.js muito simples e funciona
+
+No exemplo de index.js os metodos as linhas abaixo é que estão atrapalhando:
+//app.use(allowMethods);
+//app.use(allowCrossTokenHeader);
+
+Sem elas funciona
+TESTES:
+No browser 
+http://localhost:8080/ -    GET (ola mundo)
+http://localhost:8080/api - GET (da uma errinho normal)
+http://localhost:8080/api/ - GET (ola mundo
+
+No ARC:
+http://localhost:8080/ -    GET OK
+http://localhost:8080/api - GET ERRO 404
+http://localhost:8080/api/ - GET OK
+http://localhost:8080/api/familia - POST TIMEOUT (DEVE SER ALGO COM O MONGODB)
+
+
+ver exemplos em: https://gist.github.com/azat-co/6075685
+
+
+PAREI EM
+testar do post pra frente: https://www.youtube.com/watch?v=Orh3eiNcETs
+não esta entrando no post original
+
+
+ver video de rest: https://www.youtube.com/watch?v=7YcW25PHnAA
